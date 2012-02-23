@@ -11,7 +11,39 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120221014743) do
+ActiveRecord::Schema.define(:version => 20120221014744) do
+
+  create_table "attendances", :force => true do |t|
+    t.integer "event_id"
+    t.integer "person_id"
+  end
+
+  create_table "event_type_members", :force => true do |t|
+    t.integer "event_type_id"
+    t.integer "person_id"
+  end
+
+  create_table "event_types", :force => true do |t|
+    t.string  "name"
+    t.integer "frequency"
+  end
+
+  create_table "events", :force => true do |t|
+    t.integer "event_type_id"
+    t.date    "date"
+  end
+
+  create_table "families", :force => true do |t|
+    t.string "last_name"
+  end
+
+  create_table "people", :force => true do |t|
+    t.string  "first_name"
+    t.string  "middle_name"
+    t.string  "last_name"
+    t.integer "family_id"
+    t.string  "description"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

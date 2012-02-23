@@ -1,0 +1,16 @@
+- create models for all the migrations tables: 20120221014744_create_tables.rb
+- add sunday_service type to event_types table using db/seeds.rb, rake db:seed
+- add status column to people
+- rake task to import all the members
+- rake task to move all members to the roster list
+- view for the attendances index (show all attendances for date)
+
+- start api controller; POST, DELETE individual attendance records
+- do some basic javascript
+- do security stuff (both attendance controllers and home controller require auth)
+
+LATER:
+- people CRUD ; create, update, read; use a resource
+- roster list CRUD; /workspace/id/event_types/id/event_type_members
+
+
