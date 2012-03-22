@@ -1,6 +1,7 @@
 - create models for all the migrations tables: 20120221014744_create_tables.rb
 - add sunday_service type to event_types table using db/seeds.rb, rake db:seed
 - add status column to people
+
 - rake task to import all the members
 - rake task to move all members to the roster list
 - view for the attendances index (show all attendances for date)

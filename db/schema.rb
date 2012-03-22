@@ -14,35 +14,40 @@
 ActiveRecord::Schema.define(:version => 20120221014744) do
 
   create_table "attendances", :force => true do |t|
-    t.integer "event_id"
-    t.integer "person_id"
+    t.integer "event_id",  :null => false
+    t.integer "person_id", :null => false
   end
 
   create_table "event_type_members", :force => true do |t|
-    t.integer "event_type_id"
-    t.integer "person_id"
+    t.integer "event_type_id", :null => false
+    t.integer "person_id",     :null => false
   end
 
   create_table "event_types", :force => true do |t|
-    t.string  "name"
+    t.string  "name",      :null => false
     t.integer "frequency"
   end
 
   create_table "events", :force => true do |t|
-    t.integer "event_type_id"
-    t.date    "date"
+    t.integer "event_type_id", :null => false
+    t.date    "date",          :null => false
   end
 
   create_table "families", :force => true do |t|
-    t.string "last_name"
+    t.string   "last_name"
+    t.datetime "created_at"
   end
 
   create_table "people", :force => true do |t|
-    t.string  "first_name"
-    t.string  "middle_name"
-    t.string  "last_name"
-    t.integer "family_id"
-    t.string  "description"
+    t.string   "first_name"
+    t.string   "middle_name"
+    t.string   "last_name"
+    t.integer  "gender",      :limit => 2, :default => 0, :null => false
+    t.integer  "family_id"
+    t.string   "description"
+    t.integer  "status",                   :default => 0, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
