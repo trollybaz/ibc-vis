@@ -34,14 +34,16 @@ ActiveRecord::Schema.define(:version => 20120221014744) do
   end
 
   create_table "families", :force => true do |t|
-    t.string   "last_name"
+    t.string   "name"
     t.datetime "created_at"
+    t.string   "address"
   end
 
   create_table "people", :force => true do |t|
     t.string   "first_name"
     t.string   "middle_name"
     t.string   "last_name"
+    t.date     "birthday"
     t.integer  "gender",      :limit => 2, :default => 0, :null => false
     t.integer  "family_id"
     t.string   "description"

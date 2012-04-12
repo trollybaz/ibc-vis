@@ -21,6 +21,10 @@ group :assets do
   gem 'uglifier'
 end
 
+group :development, :test do
+  gem 'awesome_print'
+end
+
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false

@@ -32,6 +32,7 @@ GEM
       multi_json (~> 1.0)
     ansi (1.4.2)
     arel (2.2.1)
+    awesome_print (1.0.2)
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
     coffee-rails (3.1.1)
@@ -119,6 +120,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   coffee-rails (~> 3.1.0)
   devise
   jquery-rails

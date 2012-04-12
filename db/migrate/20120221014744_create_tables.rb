@@ -2,8 +2,9 @@ class CreateTables < ActiveRecord::Migration
   def up
     # create family table
     create_table :families do |t|
-      t.string :last_name
+      t.string :name
       t.datetime :created_at
+      t.string :address
     end
 
     # create person table
@@ -11,6 +12,7 @@ class CreateTables < ActiveRecord::Migration
       t.string :first_name
       t.string :middle_name
       t.string :last_name
+      t.date   :birthday
       t.integer :gender, default: 0, null: false, limit: 2
       t.belongs_to :family
       t.string :description
